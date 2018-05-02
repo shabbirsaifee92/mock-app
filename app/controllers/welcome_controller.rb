@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
     }
     req = Net::HTTP::Post.new(uri)
     req.body = data.to_json
-    res = http.request(req)
-    res.to_json
+    @res = http.request(req)
+
   end
 end
